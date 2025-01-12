@@ -1,0 +1,11 @@
+num_1 = 42                       # Weist der Variablen 'num_1' den Wert 42 (eine Ganzzahl) zu.
+num_2 = 7                        # Weist der Variablen 'num_2' den Wert 7 (eine Ganzzahl) zu.
+num_3 = 6.1                       # Weist der Variablen 'num_3' den Wert 6.1 (eine Fließkommazahl) zu.
+print(num_1 + num_2)             # Gibt die Summe von 'num_1' und 'num_2' aus (42 + 7 = 49).
+print(num_1 - num_2)             # Gibt die Differenz von 'num_1' und 'num_2' aus (42 - 7 = 35).
+print(num_1 * num_2)             # Gibt das Produkt von 'num_1' und 'num_2' aus (42 * 7 = 294).
+print(num_1 / num_2)             # Gibt das Ergebnis der Division von 'num_1' durch 'num_2' aus (42 / 7 = 6.0).
+print(num_1 ** num_2)            # Gibt das Ergebnis von 'num_1' hoch 'num_2' aus (42^7 = 105413504).
+print(num_1 % num_2)             # Gibt den Rest der Division von 'num_1' durch 'num_2' aus (42 % 7 = 0).
+print(num_1 % num_3)             # Gibt den Rest der Division von 'num_1' durch 'num_3' aus (42 % 6.1 = 5.799999999999997).
+print(num_1 // num_3)            # Gibt das Ergebnis der ganzzahligen Division von 'num_1' durch 'num_3' aus (42 // 6.1 = 6).
