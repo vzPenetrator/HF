@@ -21,3 +21,6 @@ INSERT INTO Benutzer (name, email) VALUES
 
 SELECT * FROM Benutzer;             Gibt nun die hinterlegte Tabelle mit informationen in der Shell aus.
 
+SHOW DATABASES;                     Zeigt einem alle verfügbaren Datenbanken an.
+SELECT DATABASE();                  Wählt die ()-Datenbank aus.
+
