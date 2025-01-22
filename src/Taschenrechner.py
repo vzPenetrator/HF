@@ -32,35 +32,38 @@ def multipliziere(zahl1, zahl2):
 
 def dividiere(zahl1, zahl2):
     if zahl2 == 0:
-        return "Fehler: Division durch 0 ist nicht erlaubt."
+        print("Fehler: Division durch 0 ist nicht erlaubt.")
+        return None
     return zahl1 / zahl2
 
 
 
 print("Menu:")
-print("Eingabe 1 ist Neue Berechnung")
-print("Eingabe 0 ist Programm beenden")
+print("Die Eingabe von 1, starte eine neue Berechnung")
+print("Die Eingabe von 0, beendet das Rechenprogramm")
 menuEingabe = input("Eingabe: ")
 while menuEingabe == "1":
     print("Gib 2 Zahlen ein")
-    zahl1 = int(input("Gib die erste Zahl ein: "))
-    zahl2 = int(input("Gib die zweite Zahl ein: "))
-    print("Bitte wähle einen Operator")
-    Operator = input("Bitte den Operator eingeben: ")
+    zahl1 = int(input("Bitte gib die erste Zahl ein: "))
+    zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+    print("Bitte wähle den gewünschten Operator")
+    Operator = input("Bitte den Operator eingeben (+, -, *, /): ")
     if Operator == "+":
             print("Addition")
-            result = zahl1 + zahl2
+            result = addiere (zahl1, zahl2)
             print(result)
     elif Operator == "-":
-            result = zahl1 - zahl2
+            result = subtrahiere (zahl1, zahl2)
             print(result)
     elif Operator == "*":
-            result = zahl1 * zahl2
+            result = multipliziere (zahl1, zahl2)
             print(result)
     elif Operator == "/":
-            result = zahl1 / zahl2
-            print(result)
+            result = dividiere (zahl1, zahl2)
+            if result is not None:
+                print(result)      
     else:
         print("Bitte korrekten Operator wählen")
-    print("Bitte Operation eingeben")
+    
+    menuEingabe = input("Eingabe: 1 für neue Berechnung, 0 zum Beenden: ")
 print("Programm Beendet")
