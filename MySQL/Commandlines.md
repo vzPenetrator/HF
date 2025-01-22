@@ -1,6 +1,6 @@
 # Commandlines für MySQL
 
-Create database name;          Generiert eine Datenbank
+Create database name;          Generiert eine Datenbank (bei name wird die Benennung der DB eingegeben)
 USE mydatabase;                Benutzt die gewünschte Datenbank
 cd mydatabase;                 Geht in die Datenbank rein
 
