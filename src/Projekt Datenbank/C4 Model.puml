@@ -9,30 +9,22 @@ def generate_plantuml():
 
     ' Level 1: Context Diagram
     System(Student, "Schüler", "Erstellt und verwaltet Fahrten")
-    System(SystemDB, "MySQL Datenbank", "Speichert Fahrtdaten")
+    System(Database, "MySQL Datenbank", "Speichert Fahrtdaten")
     System_Ext(User, "Benutzer", "Interagiert mit der Software")
     Rel(User, Student, "Nutzt")
-    Rel(Student, SystemDB, "Liest & schreibt Daten")
+    Rel(Student, Database, "Liest & schreibt Daten")
     
     ' Level 2: Container Diagram
     Container(StudentApp, "Fahrten-App", "Python Flask", "Verwaltet CRUD-Funktionen")
-    ContainerDb(SystemDB, "MySQL Datenbank", "MySQL", "Speichert Fahrtdaten")
+    Container(DatabaseContainer, "MySQL Datenbank", "MySQL", "Speichert Fahrtdaten")
     Rel(Student, StudentApp, "Verwendet")
-    Rel(StudentApp, SystemDB, "Greift auf zu")
+    Rel(StudentApp, DatabaseContainer, "Greift auf zu")
     
     ' Level 3: Component Diagram
     Component(Api, "API Layer", "Flask", "Stellt Endpunkte bereit")
     Component(DbHandler, "Datenbank Handler", "SQLAlchemy", "Kommuniziert mit der DB")
     Rel(StudentApp, Api, "Sendet Anfragen")
     Rel(Api, DbHandler, "Fragt Daten ab")
-    Rel(DbHandler, SystemDB, "Speichert & holt Daten")
+    Rel(DbHandler, DatabaseContainer, "Speichert & holt Daten")
 
     @enduml
-    """
-    
-    with open("c4_model.puml", "w", encoding="utf-8") as file:
-        file.write(plantuml_code)
-    print("PlantUML-Datei 'c4_model.puml' wurde erstellt!")
-
-if __name__ == "__main__":
-    generate_plantuml()
