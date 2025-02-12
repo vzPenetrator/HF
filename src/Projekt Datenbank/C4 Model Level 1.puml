@@ -1,0 +1,11 @@
+def generate_plantuml():
+    context_diagram = """
+    @startuml C4_Context
+    !include <C4/C4_Context>
+
+    System(Student, "Schüler", "Erstellt und verwaltet Fahrten")
+    System(Database, "MySQL Datenbank", "Speichert Fahrtdaten")
+    System_Ext(User, "Benutzer", "Interagiert mit der Software")
+    Rel(User, Student, "Nutzt")
+    Rel(Student, Database, "Liest & schreibt Daten")
+    @enduml

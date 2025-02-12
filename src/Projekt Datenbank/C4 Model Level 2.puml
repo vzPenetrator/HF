@@ -1,0 +1,9 @@
+    container_diagram = """
+    @startuml C4_Container
+    !include <C4/C4_Container>
+
+    Container(StudentApp, "Fahrten-App", "Python Flask", "Verwaltet CRUD-Funktionen")
+    Container(DatabaseContainer, "MySQL Datenbank", "MySQL", "Speichert Fahrtdaten")
+    Rel(Student, StudentApp, "Verwendet")
+    Rel(StudentApp, DatabaseContainer, "Greift auf zu")
+    @enduml

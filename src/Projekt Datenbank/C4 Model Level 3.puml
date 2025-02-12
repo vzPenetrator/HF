@@ -1,0 +1,10 @@
+    component_diagram = """
+    @startuml C4_Component
+    !include <C4/C4_Component>
+
+    Component(Api, "API Layer", "Flask", "Stellt Endpunkte bereit")
+    Component(DbHandler, "Datenbank Handler", "SQLAlchemy", "Kommuniziert mit der DB")
+    Rel(StudentApp, Api, "Sendet Anfragen")
+    Rel(Api, DbHandler, "Fragt Daten ab")
+    Rel(DbHandler, DatabaseContainer, "Speichert & holt Daten")
+    @enduml
