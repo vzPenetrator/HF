@@ -1,0 +1,16 @@
+rate = "7"
+versuche = 3
+
+nummer = input("Eingabe")
+
+while versuche > 0:
+    if nummer == rate:
+        print("Richtig!")
+        break
+    else:
+        print("Falsch!")
+        versuche = versuche - 1
+    if versuche > 0:
+        nummer = input("Eingabe")
+if versuche == 0:
+    print("Ende!")

@@ -1,0 +1,8 @@
+def main():
+    X = 56
+    print(X+1) 
+    Y = 121
+    print(Y-2) 
+    Z = Y - X
+    print(Z)    
+if __name__ == "__main__":
